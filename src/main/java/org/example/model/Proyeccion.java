@@ -6,22 +6,21 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "proyecciones")
-
-public class Proyecciones {
+public class Proyeccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_proyeccion")
-    private  Integer idProyeccion;
+    private Integer id;
 
     @Column(name = "id_pelicula")
-    private  Integer idPelicula;
+    private Integer idPelicula;
 
     @Column(name = "id_sala")
-    private  Integer idSala;
+    private Integer idSala;
 
     @Column(name = "fecha_hora_inicio")
-    private  LocalDateTime fechaHoraInicio;
+    private LocalDateTime fechaHoraInicio;
 
     @Column(name = "fecha_hora_fin")
     private LocalDateTime fechaHoraFin;
@@ -30,14 +29,14 @@ public class Proyecciones {
     private BigDecimal precioEntrada;
 
     @Column(name = "asientos_disponibles")
-    private  Integer asientosDispo;
+    private Integer asientosDisponibles;
 
-    public Integer getIdProyeccion() {
-        return idProyeccion;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdProyeccion(Integer idProyeccion) {
-        this.idProyeccion = idProyeccion;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getIdPelicula() {
@@ -80,12 +79,11 @@ public class Proyecciones {
         this.precioEntrada = precioEntrada;
     }
 
-    public Integer getAsientosDispo() {
-        return asientosDispo;
+    public Integer getAsientosDisponibles() {
+        return asientosDisponibles;
     }
 
-    public void setAsientosDispo(Integer asientosDispo) {
-        this.asientosDispo = asientosDispo;
+    public void setAsientosDisponibles(Integer asientosDisponibles) {
+        this.asientosDisponibles = asientosDisponibles;
     }
-
 }

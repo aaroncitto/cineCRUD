@@ -37,7 +37,6 @@ public class EntradaController {
             existente.setFechaCompra(entrada.getFechaCompra());
             existente.setCantidad(entrada.getCantidad());
             existente.setPrecioUnitario(entrada.getPrecioUnitario());
-            existente.setTotal(entrada.getTotal());
             existente.setMetodoPago(entrada.getMetodoPago());
             existente.setAsiento(entrada.getAsiento());
             return entradaService.guardarEntrada(existente);

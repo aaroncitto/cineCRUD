@@ -25,9 +25,6 @@ public class Entrada {
     @Column(name = "precio_unitario")
     private BigDecimal precioUnitario;
 
-    @Column(name = "total")
-    private BigDecimal total;
-
     @Column(name = "metodo_pago")
     private String metodoPago;
 
@@ -72,14 +69,6 @@ public class Entrada {
 
     public void setPrecioUnitario(BigDecimal precioUnitario) {
         this.precioUnitario = precioUnitario;
-    }
-
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    public void setTotal(BigDecimal total) {
-        this.total = total;
     }
 
     public String getMetodoPago() {

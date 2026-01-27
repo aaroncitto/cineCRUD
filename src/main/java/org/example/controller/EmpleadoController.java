@@ -1,8 +1,10 @@
 package org.example.controller;
 
 import org.example.model.Empleado;
+import org.example.model.EmpleadoMongo;
 import org.example.service.EmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,6 +24,13 @@ public class EmpleadoController {
     @GetMapping("/{id}")
     public Empleado buscarPorId(@PathVariable Integer id) {
         return empleadoService.buscarPorId(id);
+    }
+
+    @GetMapping("/mongo")
+    public ResponseEntity<List<EmpleadoMongo>> obtenerEmpleadosMongo() {
+        // Llamamos al servicio que acabamos de crear
+        List<EmpleadoMongo> listaMongo = empleadoService.listarTodosDeMongo();
+        return ResponseEntity.ok(listaMongo);
     }
 
     @PostMapping

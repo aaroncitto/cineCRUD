@@ -20,7 +20,6 @@ public class EmpleadoMongo {
     private BigDecimal salarioHora;
     private Boolean activo;
 
-    public EmpleadoMongo() {}
 
     public EmpleadoMongo(String nombre, String puesto, String tipoJornada, String email, String telefono, LocalDate fechaContratacion, BigDecimal salarioHora, Boolean activo) {
         this.nombre = nombre;
@@ -29,7 +28,7 @@ public class EmpleadoMongo {
         this.email = email;
         this.telefono = telefono;
         this.fechaContratacion = fechaContratacion;
-        this.salarioHora = salarioHora; // <--- ¡Asegúrate de que esta variable está también arriba en el paréntesis!
+        this.salarioHora = salarioHora; //
         this.activo = activo;
     }
 

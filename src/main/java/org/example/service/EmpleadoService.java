@@ -29,9 +29,9 @@ public class EmpleadoService {
                 empleadoGuardado.getPuesto(),
                 empleadoGuardado.getTipoJornada().toString(),
                 empleadoGuardado.getEmail(),
-                String.valueOf(empleadoGuardado.getTelefono()), // Convertimos a String seguro
+                String.valueOf(empleadoGuardado.getTelefono()),
                 empleadoGuardado.getFechaContratacion(),
-                empleadoGuardado.getSalarioHora(), // Pasamos directo (es BigDecimal)
+                empleadoGuardado.getSalarioHora(),
                 empleadoGuardado.getActivo()
         );
 
@@ -51,6 +51,11 @@ public class EmpleadoService {
 
     public Empleado buscarPorId(Integer id) {
         return empleadoRepository.findById(id).orElse(null);
+    }
+
+    // Este método usa el repositorio de Mongo para traer todos los documentos
+    public List<EmpleadoMongo> listarTodosDeMongo() {
+        return empleadoMongoRepository.findAll();
     }
 
 }
